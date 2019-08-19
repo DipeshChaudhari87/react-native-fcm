@@ -2,6 +2,7 @@ package com.evollu.react.fcm;
 
 import java.util.Map;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -98,7 +99,7 @@ public class MessagingService extends FirebaseMessagingService {
                 bundle.putBoolean("wake_screen",Boolean.valueOf(data.get("wake_screen")));
                 helper.sendNotification(bundle);
             } catch (Exception e) {
-				Log.e(TAG, "buildLocalNotification exception :", +e.printStackTrace());
+				Log.e(TAG, "buildLocalNotification exception :"+e.getLocalizedMessage());
                // e.printStackTrace();
             }
 
