@@ -57,6 +57,7 @@ public class SendNotificationTask extends AsyncTask<Void, Void, Void> {
         this.sharedPreferences = sharedPreferences;
         this.mIsForeground = mIsForeground;
 		notificationChannelId  = context.getApplicationContext().getPackageName();
+    	ApplicationInfo appInfo = context.getApplicationInfo();
         notificationChannelName = context.getApplicationContext().getPackageManager().getApplicationLabel(appInfo).toString();
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
             NotificationManager notificationManager= (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
