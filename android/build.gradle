@@ -29,7 +29,7 @@ dependencies {
     def firebaseMessagingVersion = project.hasProperty('firebaseMessagingVersion') ? project.firebaseMessagingVersion : DEFAULT_FIREBASE_MESSAGING_VERSION
 
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.facebook.react:react-native:0.59.10'
+    compile 'com.facebook.react:react-native:+'
     compile "com.google.firebase:firebase-core:$firebaseCoreVersion"
     compile "com.google.firebase:firebase-messaging:$firebaseMessagingVersion"
     compile 'me.leolin:ShortcutBadger:1.1.17@aar'
